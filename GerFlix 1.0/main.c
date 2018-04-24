@@ -24,5 +24,8 @@ int main()
     */
 
     mostrarListaSeries(listaDeSeries, TAMSERIE);
+    mostrarListaUsuarios(listaDeUsuarios, TAMUSUARIO);
+    mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
+
     return 0;
 }

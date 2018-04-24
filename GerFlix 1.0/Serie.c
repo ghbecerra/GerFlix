@@ -43,9 +43,7 @@ void mostrarListaSeries(eSerie series[], int cant)
     {
         if(series[i].estado==1)
         {
-            printf("serie nombre: %d %s \n", series[i].idSerie, series[i].nombre);
+            printf("Id: %d Serie: %s \n", series[i].idSerie, series[i].nombre);
         }
-
     }
-
 }
