@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "Serie.h"
+#include "Usuario.h"
 /*
 typedef struct
 {
@@ -46,4 +47,27 @@ void mostrarListaSeries(eSerie series[], int cant)
             printf("Id: %d Serie: %s \n", series[i].idSerie, series[i].nombre);
         }
     }
+}
+//4. Mostrar por cada serie, el nombre de los usuarios que la ven.
+void mostrarPorSerieUsuariosQueLaVen(eSerie series[], int cantS, eUsuario usuarios[], int cantU)
+{
+    int i;
+    int j;
+    for(i=0;i<cantS;i++)
+    {
+        if(series[i].estado==1)
+        {
+            printf("Id: %d Serie: %s \n", series[i].idSerie, series[i].nombre);
+            for(j=0;j<cantU;j++)
+            {
+                if(usuarios[j].estado==1 && series[i].idSerie==usuarios[j].idSerie)
+                {
+                    printf("Id: %d Usuario: %s \n", usuarios[j].idUsuario, usuarios[j].nombre);
+                }
+
+            }
+        }
+    }
+
+
 }

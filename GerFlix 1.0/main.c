@@ -26,6 +26,7 @@ int main()
     mostrarListaSeries(listaDeSeries, TAMSERIE);
     mostrarListaUsuarios(listaDeUsuarios, TAMUSUARIO);
     mostrarUsuarioConSuSerie(listaDeUsuarios, TAMUSUARIO, listaDeSeries, TAMSERIE);
+    mostrarPorSerieUsuariosQueLaVen(listaDeSeries, TAMSERIE, listaDeUsuarios, TAMUSUARIO);
 
     return 0;
 }
