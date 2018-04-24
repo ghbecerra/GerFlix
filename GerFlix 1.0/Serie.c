@@ -1,26 +1,24 @@
-
-#include "Serie.h"
+#include <stdio.h>
 #include <string.h>
-
+#include "Serie.h"
 /*
+typedef struct
+{
     int idSerie;
     char nombre[50];
     char genero[20];
     int cantidadTemporadas;
     int estado;
-
+}eSerie;
 */
-
 void inicializarSeriesEstado(eSerie series[], int cant)
 {
     int i;
-
     for(i=0; i<cant; i++)
     {
-        series[i].estado = 0;
+        series[i].estado=0;
     }
 }
-
 
 void inicializarSeriesHardCode(eSerie series[])
 {
@@ -28,9 +26,7 @@ void inicializarSeriesHardCode(eSerie series[])
     char nombre[][50]={"TBBT","TWD","GOT","BB","LCDP"};
     char genero[][50]={"Comedia","Terror","Suspenso","Policial","Policial"};
     int cantidad[5] = {10,9,7,5,2};
-
     int i;
-
     for(i=0; i<5; i++)
     {
         series[i].idSerie=id[i];
@@ -40,4 +36,16 @@ void inicializarSeriesHardCode(eSerie series[])
         strcpy(series[i].genero, genero[i]);
     }
 }
+void mostrarListaSeries(eSerie series[], int cant)
+{
+    int i;
+    for(i=0;i<cant;i++)
+    {
+        if(series[i].estado==1)
+        {
+            printf("serie nombre: %d %s \n", series[i].idSerie, series[i].nombre);
+        }
 
+    }
+
+}

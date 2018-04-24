@@ -5,14 +5,14 @@
 #define TAMSERIE 20
 #define TAMUSUARIO 100
 
-
 int main()
 {
     eSerie listaDeSeries[TAMSERIE];
     eUsuario listaDeUsuarios[TAMUSUARIO];
-    inicializarSeriesEstado(listaDeSeries, TAMSERIE);
 
+    inicializarSeriesEstado(listaDeSeries, TAMSERIE);
     inicializarSeriesHardCode(listaDeSeries);
+
     inicializarUsuariosEstado(listaDeUsuarios,TAMUSUARIO);
     inicializarUsuariosHardCode(listaDeUsuarios);
 
@@ -23,5 +23,6 @@ int main()
     4. Mostrar por cada serie, el nombre de los usuarios que la ven.
     */
 
+    mostrarListaSeries(listaDeSeries, TAMSERIE);
     return 0;
 }
